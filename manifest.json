@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "🗿世界遺産",
-  "short_name": "🗿世界遺産",
+  "name": "name",
+  "short_name": "short_name",
   "description": "世界遺産探検家",
 
   "version": "2015.6.16.68",
