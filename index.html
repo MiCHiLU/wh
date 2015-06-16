@@ -3,12 +3,13 @@
 <link href='//maxcdn.bootstrapcdn.com' rel='dns-prefetch'>
 <title>&#128511;世界遺産</title>
 <meta charset='utf-8'>
-<meta content='width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' name='viewport'>
+<meta content='width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'>
 <link href='img/apple-touch-icon-144x144-precomposed.png' rel='apple-touch-icon-precomposed' sizes='144x144'>
 <link href='img/apple-touch-icon-114x114-precomposed.png' rel='apple-touch-icon-precomposed' sizes='114x114'>
 <link href='img/apple-touch-icon-72x72-precomposed.png' rel='apple-touch-icon-precomposed' sizes='72x72'>
 <link href='img/apple-touch-icon-57x57-precomposed.png' rel='apple-touch-icon-precomposed'>
 <link href='img/apple-touch-icon-57x57-precomposed.png' rel='shortcut icon'>
+<script async src='lazyload-image.js'></script>
 <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='subresource'>
 <style>
   img {
@@ -36,18 +37,12 @@
       margin-bottom: -1px;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0; }
-    .list-group-item img {
-      -webkit-filter: contrast(200%);
-      -moz-filter: contrast(200%);
-      -o-filter: contrast(200%);
-      -ms-filter: contrast(200%);
-      filter: contrast(200%); }
   
   .list-group-item-text {
     padding: 4px; }
     .list-group-item-text p {
       margin-bottom: 0;
-      font-size: 0.89em;
+      font-size: 0.749em;
       line-height: 1.12em;
       font-weight: 600;
       overflow: hidden;
@@ -67,21 +62,23 @@
 </style>
 <link href='manifest.json' rel='manifest'>
 <script>
-  window.addEventListener('load', function() {
-    var outputElement = document.getElementById('output');
-    navigator.serviceWorker.register('service-worker.js', { scope: './' })
-      .then(function(r) {
-        console.log('registered service worker');
-      })
-      .catch(function(whut) {
-        console.error('uh oh... ');
-        console.error(whut);
+  (function() {
+    window.addEventListener('load', function() {
+      var outputElement, ref;
+      outputElement = document.getElementById('output');
+      if ((ref = navigator.serviceWorker) != null) {
+        ref.register('service-worker.js', {
+          scope: './'
+        }).then(function(r) {})["catch"](whut)(function() {
+          console.error(whut);
+        });
+      }
+      window.addEventListener('beforeinstallprompt', function(e) {
+        outputElement.textContent = 'beforeinstallprompt Event fired';
       });
-  
-    window.addEventListener('beforeinstallprompt', function(e) {
-      outputElement.textContent = 'beforeinstallprompt Event fired';
     });
-  });
+  
+  }).call(this);
 </script>
 <body>
 <div class='navbar navbar-default'>
@@ -89,6 +86,128 @@
 <p class='navbar-text text-center'><strong>世界遺産</strong>&#128511;<strong>探検家</strong></p>
 </div>
 </div>
+<ul class='list-group'>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/10962/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/10962.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>世界遺産の街から中世へダイブ！フィリピン・ビガン歴史地区で麗しの夜を</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/9833/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/9833.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>往復はがきで予約するのが新しい？岩手県古民家の宿「苫屋」でほっこりしよう</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/5376/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/5376.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>ナウシカの金色の草原！奈良「曽爾高原」の絶景と温泉満喫！</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/5373/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/5373.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>超先取り！隠れキリシタンの島・長崎「黒島」で世界遺産と自然の恵を味わいつくす！</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/9773/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/9773.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>世界自然遺産で百名山！羅臼岳山頂から望む知床半島は奇跡の絶景</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/9127/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/9127.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>世界遺産とアートがコラボ！マレーシア・ペナン島「ジョージタウン」はカラフルストリート</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/9499/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/9499.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>息を飲む絶景は恋愛パワースポット！中国雲南省「玉龍雪山景区」で永遠の愛を誓おう！</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/9164/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/9164.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>ベトナム中部の玄関口「ダナン」に魅了されたい厳選スポット！</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/7752/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/7752.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>陸のハロン湾！2014年世界遺産に登録 ベトナム「チャンアン」で船の旅</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/5220/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/5220.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>世界三大登山鉄道「阿里山森林鉄道」に乗って台湾最強パワースポット「阿里山」へ行こう</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/6797/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/6797.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>古き良き港町 ベトナム世界遺産「ホイアン」のランタンの下で</p>
+</div>
+</a>
+</li>
+<li class='list-group-item col-xs-6 col-lg-4'>
+<a href='http://guide.travel.co.jp/article/8364/' target='_blank'>
+<div class='embed-responsive embed-responsive-4by3'>
+<img class='embed-responsive-item' is='lazyload-image' src='p/8364.jpg'>
+</div>
+<div class='list-group-item-text'>
+<p>1日攻略！ラオスの首都「ビエンチャン」観光ハイライト</p>
+</div>
+</a>
+</li>
+</ul>
 <script>
   (function() {
     var css, i, len, ref;
@@ -101,4 +220,3 @@
   
   }).call(this);
 </script>
-<script src='/lazyload-image.js'></script>

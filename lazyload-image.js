@@ -49,6 +49,8 @@
   // lifecycle callbacks
   LazyloadImagePrototype.createdCallback = function () {
 
+    if (this.complete || this.readyState === 'complete') return;
+
     var that = this;
 
     // swap original src attribute
@@ -117,9 +119,11 @@
   };
 
   // register element as lazyload-image
-  window.LazyloadImage = document.registerElement('lazyload-image', {
-    prototype: LazyloadImagePrototype,
-    extends: 'img'
-  });
+  if (document.registerElement != null) {
+    window.LazyloadImage = document.registerElement('lazyload-image', {
+      prototype: LazyloadImagePrototype,
+      "extends": 'img'
+    });
+  }
 
 })();
