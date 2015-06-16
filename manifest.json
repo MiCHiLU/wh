@@ -6,12 +6,13 @@
 
   "version": "2015.6.16.63",
 
-  "icons": {
-    "57":  "img/apple-touch-icon-57x57-precomposed.png",
-    "72":  "img/apple-touch-icon-72x72-precomposed.png",
-    "114": "img/apple-touch-icon-114x114-precomposed.png",
-    "144": "img/apple-touch-icon-144x144-precomposed.png"
-  },
+  "icons": [
+    {
+      "src":  "img/apple-touch-icon-144x144-precomposed.png",
+      "sizes":  "144x144",
+      "type":  "image/png"
+    }
+  ],
 
   "app": {
     "background": {
