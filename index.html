@@ -28,15 +28,13 @@
   .navbar-header {
     width: 100%; }
   
-  .list-group-item {
-    padding: 0; }
-    .list-group-item:first-child {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0; }
-    .list-group-item:last-child {
-      margin-bottom: -1px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0; }
+  .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  .list-group-item:last-child {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
   
   .list-group-item-text {
     padding: 4px; }
@@ -52,6 +50,9 @@
       -webkit-line-clamp: 3;
       height: 3.13em; }
   
+  #article .list-group-item {
+    padding: 0; }
+  
   @media(min-width:768px) {
     .list-group-item-text {
       padding: 5%; }
@@ -59,6 +60,27 @@
         font-size: 1.7em;
         -webkit-line-clamp: 2;
         height: 2.24em; } }
+  
+  #country {
+    line-height: 32px; }
+    #country .flag {
+      margin-top: -2px; }
+</style>
+<style>
+  .flag {
+    width: 32px;
+    height: 32px;
+    background:url(img/flags.png) no-repeat
+  }
+  
+  .flag.flag-cn {background-position: -32px 0}
+  .flag.flag-id {background-position: -64px 0}
+  .flag.flag-la {background-position: 0 -32px}
+  .flag.flag-lk {background-position: -32px -32px}
+  .flag.flag-my {background-position: -64px -32px}
+  .flag.flag-th {background-position: 0 -64px}
+  .flag.flag-tw {background-position: -32px -64px}
+  .flag.flag-vn {background-position: -64px -64px}
 </style>
 <link href='manifest.json' rel='manifest'>
 <script>
@@ -87,8 +109,12 @@
 </div>
 </div>
 <div class='text-center'><div class='bg-info'>新しい記事のお知らせを受け取るには
-<a class='btn btn-default btn-xs' href='https://bpush.net/site/150/join?back=https://xn--rhqz54a27fizf2xq9gao35o.tk' role='button'>&#128276;通知設定</a></div>ぜひ読みたい<span style='color:white'><span style='background-color:rgb(234,108,108)'>た</span><span style='background-color:rgb(221,191,62)'>び</span><span style='background-color:rgb(137,199,67)'>ね</span><span style='background-color:rgb(93,187,209)'>す</span></span>おすすめ記事です。
-</div>
+<a class='btn btn-default btn-xs' href='https://bpush.net/site/150/join?back=https://xn--rhqz54a27fizf2xq9gao35o.tk' role='button'>&#128276;通知設定</a></div></div>
+<h5 class='text-center'>
+ぜひ読みたい<span style='color:white'><span style='background-color:rgb(234,108,108)'>た</span><span style='background-color:rgb(221,191,62)'>び</span><span style='background-color:rgb(137,199,67)'>ね</span><span style='background-color:rgb(93,187,209)'>す</span></span>おすすめ記事の特集です。
+</h5>
+<div class='container'>
+<div class='row' id='article'>
 <ul class='list-group'>
 <li class='list-group-item col-xs-6 col-lg-4'>
 <a href='http://guide.travel.co.jp/article/10962/' target='_blank'>
@@ -211,6 +237,47 @@
 </a>
 </li>
 </ul>
+</div>
+<div class='row text-center' style='padding:1em 0'>
+国別に<span style='color:white'><span style='background-color:rgb(234,108,108)'>た</span><span style='background-color:rgb(221,191,62)'>び</span><span style='background-color:rgb(137,199,67)'>ね</span><span style='background-color:rgb(93,187,209)'>す</span></span>寄稿記事をまとめました。
+</div>
+<div class='row' id='country'>
+<div class='list-group text-center'>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p176/n416/' target='_blank'>
+<span class='glyphicon flag flag-tw pull-left'></span>
+台湾
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p178/n416/' target='_blank'>
+<span class='glyphicon flag flag-th pull-left'></span>
+タイ
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p194/n416/' target='_blank'>
+<span class='glyphicon flag flag-vn pull-left'></span>
+ベトナム
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p81/n416/' target='_blank'>
+<span class='glyphicon flag flag-id pull-left'></span>
+インドネシア
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p108/n416/' target='_blank'>
+<span class='glyphicon flag flag-my pull-left'></span>
+マレーシア
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p37/n416/' target='_blank'>
+<span class='glyphicon flag flag-cn pull-left'></span>
+中国
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p96/n416/' target='_blank'>
+<span class='glyphicon flag flag-la pull-left'></span>
+ラオス
+</a>
+<a class='list-group-item col-xs-6 col-lg-2' href='http://guide.travel.co.jp/archive_world/list/p167/n416/' target='_blank'>
+<span class='glyphicon flag flag-lk pull-left'></span>
+スリランカ
+</a>
+</div>
+</div>
+</div>
 <script>
   (function() {
     var css, i, len, ref;
